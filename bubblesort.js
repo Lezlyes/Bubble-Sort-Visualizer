@@ -25,7 +25,7 @@ function swap(el1, el2){
         el1.style.transform = el2.style.transform;
         el2.style.transform = temp;
 
-        winsow.requestAnimationFrame(function (){
+        window.requestAnimationFrame(function (){
             setTimeout(() =>{
                 container.insertBefore(el2, el1);
                 resolve();
@@ -36,7 +36,7 @@ function swap(el1, el2){
 async function BubbleSort(delay=100){
     var blocks = document.querySelectorAll(".block");
 
-    for (var q=0; i<blocks.length; i+=1){
+    for (var i=0; i<blocks.length; i+=1){
         for(var j=0; j<blocks.length-i-1; j+=1){
             blocks[j].style.backgroundColor = "FF4949";
             blocks[j+1].style.backgroundColor="FF4949";
